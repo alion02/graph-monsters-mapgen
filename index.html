@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Map generator for Graph Monsters</title>
+    <script type="text/javascript" src="draw.js"></script>
+    <style type="text/css">
+      canvas { border: 1px solid gray; }
+    </style>
+  </head>
+  <body onload="setup();">
+    <canvas id="canvas"></canvas><br>
+    <button id="redraw_button" onclick="generate();">Generate</button><br>
+    <input id="entry_count" type="number" placeholder="Entry count..."><br>
+    <br>Zoom<br>
+    <input id="zoom_exponent" type="range" min="0" max="6" value="4" step="0.0001" onchange="draw();"><br>
+    <select id="render_type" onchange="draw();">
+      <option value="normal" selected>Normal view</option>
+      <option value="tiled">Tiled view</option>
+    </select>
+  </body>
+</html>
